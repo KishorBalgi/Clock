@@ -1,0 +1,252 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Press Start 2P", cursive;
+  font-size: 40px;
+  color: white;
+  text-rendering: optimizeLegibility;
+}
+body {
+  background-color: black;
+}
+h1 {
+  width: fit-content;
+  font-size: 80%;
+  padding-left: 100px;
+  margin: 50px auto;
+}
+form {
+  display: flex;
+  font-size: 80%;
+  width: 60%;
+  justify-content: space-around;
+  margin: 30px auto 30px auto;
+}
+input {
+  outline: none;
+  width: 18%;
+}
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+}
+*:focus {
+  outline: none;
+}
+ion-icon {
+  transition: all 0.2s;
+}
+ion-icon:hover {
+  transform: scale(1.1);
+}
+.date-time {
+  display: flex;
+  flex-direction: column;
+  width: 1140px;
+  margin: 0 auto;
+}
+.display-clock {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  font-size: 250%;
+  width: auto;
+  margin: 150px auto 40px auto;
+}
+.display-date {
+  width: auto;
+  margin: 0 auto;
+}
+.clock-options {
+  font-size: 50%;
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  margin: 50px auto 0 auto;
+}
+.clock-options li {
+  display: inline-block;
+}
+.clock-options li button {
+  padding-bottom: 10px;
+  border-bottom: none;
+  transition: all 0.2s;
+}
+.clock-options li button:hover {
+  color: red;
+  border-bottom: 2px solid red;
+  transform: scale(1.1);
+}
+.heading {
+  display: flex;
+}
+.display-alarm {
+  display: flex;
+  flex-direction: column;
+  font-size: 70%;
+}
+.alarms {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+.add:hover {
+  color: red;
+}
+.on-off {
+  font-size: 70%;
+  color: rgb(25, 255, 25);
+}
+.edit {
+  font-size: 70%;
+  color: orange;
+}
+.delete {
+  font-size: 70%;
+  color: red;
+}
+.off {
+  color: grey;
+}
+.off:hover {
+  color: red;
+}
+.close {
+  font-size: 90%;
+  padding-right: 100px;
+}
+.close:hover {
+  color: red;
+}
+
+/* Timer */
+.timer-block {
+  display: flex;
+  flex-direction: column;
+}
+/* Stopwatch */
+.stopwatch-block {
+  display: flex;
+  flex-direction: column;
+}
+.box {
+  border: 5px solid orange;
+  width: 75px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10%;
+  margin-right: 3px;
+}
+
+.time-input-block {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  width: auto;
+  margin: 0 auto;
+}
+.time-input-block p {
+  font-size: 50%;
+}
+.time-input {
+  background-color: black;
+  border: 5px solid white;
+  color: white;
+  border-radius: 10%;
+  height: 200%;
+  text-align: center;
+}
+.time-input:focus {
+  border-color: orange;
+}
+.time-input::placeholder {
+  color: white;
+}
+.time-options {
+  display: flex;
+  font-size: 70%;
+  justify-content: space-between;
+  margin: 70px auto 0 auto;
+}
+.btn-time {
+  border: 3px solid white;
+  padding: 10px 35px;
+  margin: 0 15px;
+  transition: all 0.2s;
+}
+.btn-time:hover {
+  transform: scale(1.1);
+}
+.btn-timer-start:hover {
+  border-color: rgb(25, 255, 25);
+  color: rgb(25, 255, 25);
+}
+.btn-timer-pause:hover {
+  border-color: orange;
+  color: orange;
+}
+.btn-stopwatch-start:hover {
+  border-color: rgb(25, 255, 25);
+  color: rgb(25, 255, 25);
+}
+.btn-stopwatch-reset:hover {
+  border-color: red;
+  color: red;
+}
+/* Modal Window */
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  height: auto;
+  background-color: black;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+.modal p {
+  margin-bottom: 60px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  z-index: 5;
+}
+.progress-bar {
+  position: relative;
+  width: 50%;
+  height: 35px;
+  border: 4px solid orange;
+  border-radius: 25px;
+  margin: 40px auto 0 auto;
+}
+.progress-bar-in {
+  position: absolute;
+  height: 100%;
+  width: --width;
+  min-width: -1%;
+  max-width: 100%;
+  background-color: orange;
+  border-radius: 25px;
+}
+.hidden {
+  display: none;
+}

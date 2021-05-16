@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" name="text/css" href="Vendors/CSS/normalize.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" name="text/css" href="Resources/style.css" />
+    <title>Clock</title>
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="Vendors\Favicons\android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      sizes="512x512"
+      href="Vendors\Favicons\android-chrome-512x512.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Vendors/Favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Vendors/Favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Vendors/Favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="Vendors/Favicons/site.webmanifest" />
+  </head>
+  <body>
+    <!-------------------------------------------------------------------------------------------------------------------------------->
+    <!-- Main Page -->
+    <main class="date-time">
+      <!-------------------------------------------------------------------------------------------------------------------------------->
+      <!-- Display Clock -->
+      <div class="display-clock">
+        <div class="display-clock-hours">00</div>
+        <div>:</div>
+        <div class="display-clock-minutes">00</div>
+        <div>:</div>
+        <div class="display-clock-seconds">00</div>
+      </div>
+      <!-------------------------------------------------------------------------------------------------------------------------------->
+      <!-- Display date -->
+      <div class="display-date">Day,Date Month Year</div>
+      <!-------------------------------------------------------------------------------------------------------------------------------->
+      <!-- Display options -->
+      <nav class="display-nav">
+        <ul class="clock-options">
+          <li><button onclick="openPage(0)">Alarm</button></li>
+          <li><button onclick="openPage(1)">Timer</button></li>
+          <li><button onclick="openPage(2)">Stopwatch</button></li>
+        </ul>
+      </nav>
+      <!-------------------------------------------------------------------------------------------------------------------------------->
+      <!-- Alarm Page -->
+      <div class="alarm-block hidden">
+        <!-------------------------------------------------------------------------------------------------------------------------------->
+        <!-- Heading -->
+        <div class="heading">
+          <h1>Alarm</h1>
+          <button class="close btn-close-alarm" onclick="closePage(0)">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+        <!-------------------------------------------------------------------------------------------------------------------------------->
+        <!-- Alarm input -->
+        <form>
+          <div>
+            <input
+              class="alaram-hours-input"
+              maxlength="2"
+              name="hours"
+              placeholder="Hrs"
+            />
+            <input
+              class="alaram-minutes-input"
+              maxlength="2"
+              name="minutes"
+              placeholder="Min"
+            />
+          </div>
+          <button class="add alarm-add">
+            <ion-icon name="add"></ion-icon>
+          </button>
+        </form>
+        <!-------------------------------------------------------------------------------------------------------------------------------->
+        <!-- Display alarm list -->
+        <div class="display-alarm"></div>
+      </div>
+      <!-------------------------------------------------------------------------------------------------------------------------------->
+      <!-- Alarm modal window -->
+      <div class="modal modal-alarm hidden">
+        <p>00:00</p>
+        <button class="off btn-off-alarm">
+          <ion-icon name="notifications-off-outline"></ion-icon>
+        </button>
+      </div>
+      <div class="overlay hidden"></div>
+      <!-------------------------------------------------------------------------------------------------------------------------------->
+      <!-- Timer page -->
+      <div class="timer-block hidden">
+        <!-------------------------------------------------------------------------------------------------------------------------------->
+        <!-- Timer heading -->
+        <div class="heading">
+          <h1>Timer</h1>
+          <button class="close btn-close-timer" onclick="closePage(1)">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+        <!-------------------------------------------------------------------------------------------------------------------------------->
+        <!-- Timer input -->
+        <form>
+          <div class="time-input-block">
+            <input
+              class="time-input timer-hours-input"
+              maxlength="2"
+              name="hours"
+              placeholder="0"
+            />
+            <p>hours</p>
+            <input
+              class="time-input timer-minutes-input"
+              maxlength="2"
+              name="minutes"
+              placeholder="0"
+            />
+            <p>mins</p>
+            <input
+              class="time-input timer-seconds-input"
+              maxlength="2"
+              name="seconds"
+              placeholder="0"
+            />
+            <p>secs</p>
+          </div>
+        </form>
+        <!-------------------------------------------------------------------------------------------------------------------------------->
+        <!-- Timer options -->
+        <div class="time-options">
+          <button class="btn-time btn-timer-start">Start</button>
+          <button class="btn-time btn-timer-pause" onclick="pauseResume()">
+            Pause
+          </button>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-bar-in" style="width: 0%"></div>
+        </div>
+      </div>
+      <!-------------------------------------------------------------------------------------------------------------------------------->
+      <!-- Timer modal window -->
+      <div class="modal modal-timer hidden">
+        <p style="color: red">Time Out!</p>
+        <button class="off btn-off-timer">
+          <ion-icon name="notifications-off-outline"></ion-icon>
+        </button>
+      </div>
+      <div class="overlay hidden"></div>
+      <!-------------------------------------------------------------------------------------------------------------------------------->
+      <!-- Stopwatch page -->
+      <div class="stopwatch-block hidden">
+        <!-------------------------------------------------------------------------------------------------------------------------------->
+        <!--Stopwatch heading -->
+        <div class="heading">
+          <h1>Stopwatch</h1>
+          <button class="close btn-close-stopwatch" onclick="closePage(2)">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+        <!-------------------------------------------------------------------------------------------------------------------------------->
+        <!-- Stopwatch display -->
+        <div class="time-input-block">
+          <p class="box stopwatch-minutes-input">0</p>
+          <p>mins</p>
+          <p class="box stopwatch-seconds-input">0</p>
+          <p>.</p>
+          <p class="box stopwatch-milli-input">0</p>
+          <p>secs</p>
+        </div>
+        <!-------------------------------------------------------------------------------------------------------------------------------->
+        <!-- Stopwatch options -->
+        <div class="time-options">
+          <button class="btn-time btn-stopwatch-start">Start</button>
+          <button class="btn-time btn-stopwatch-reset">Reset</button>
+        </div>
+      </div>
+    </main>
+    <!-------------------------------------------------------------------------------------------------------------------------------->
+    <!-- Script links -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="Resources/script.js"></script>
+  </body>
+</html>
