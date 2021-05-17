@@ -1,3 +1,5 @@
+<!-- HTML Code -->
+<!-- Author:Kishor M Balgi -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,8 +12,11 @@
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
+    <!-- Stylesheet and queries link. -->
     <link rel="stylesheet" name="text/css" href="Resources/style.css" />
+    <link rel="stylesheet" name="text/css" href="Resources/queries.css" />
     <title>Clock</title>
+    <!-- Favicon Links. -->
     <link
       rel="icon"
       sizes="192x192"
@@ -102,15 +107,7 @@
         <!-- Display alarm list -->
         <div class="display-alarm"></div>
       </div>
-      <!-------------------------------------------------------------------------------------------------------------------------------->
-      <!-- Alarm modal window -->
-      <div class="modal modal-alarm hidden">
-        <p>00:00</p>
-        <button class="off btn-off-alarm">
-          <ion-icon name="notifications-off-outline"></ion-icon>
-        </button>
-      </div>
-      <div class="overlay hidden"></div>
+
       <!-------------------------------------------------------------------------------------------------------------------------------->
       <!-- Timer page -->
       <div class="timer-block hidden">
@@ -161,15 +158,7 @@
           <div class="progress-bar-in" style="width: 0%"></div>
         </div>
       </div>
-      <!-------------------------------------------------------------------------------------------------------------------------------->
-      <!-- Timer modal window -->
-      <div class="modal modal-timer hidden">
-        <p style="color: red">Time Out!</p>
-        <button class="off btn-off-timer">
-          <ion-icon name="notifications-off-outline"></ion-icon>
-        </button>
-      </div>
-      <div class="overlay hidden"></div>
+
       <!-------------------------------------------------------------------------------------------------------------------------------->
       <!-- Stopwatch page -->
       <div class="stopwatch-block hidden">
@@ -183,7 +172,7 @@
         </div>
         <!-------------------------------------------------------------------------------------------------------------------------------->
         <!-- Stopwatch display -->
-        <div class="time-input-block">
+        <div class="stopwatch-input-block time-input-block">
           <p class="box stopwatch-minutes-input">0</p>
           <p>mins</p>
           <p class="box stopwatch-seconds-input">0</p>
@@ -199,6 +188,23 @@
         </div>
       </div>
     </main>
+    <!-------------------------------------------------------------------------------------------------------------------------------->
+    <!-- Alarm modal window -->
+    <div class="modal modal-alarm hidden">
+      <p>00:00</p>
+      <button class="off btn-off-alarm">
+        <ion-icon name="notifications-off-outline"></ion-icon>
+      </button>
+    </div>
+    <div class="overlay hidden"></div>
+    <!-------------------------------------------------------------------------------------------------------------------------------->
+    <!-- Timer modal window -->
+    <div class="modal modal-timer hidden">
+      <p style="color: red">Time Out!</p>
+      <button class="off btn-off-timer">
+        <ion-icon name="notifications-off-outline"></ion-icon>
+      </button>
+    </div>
     <!-------------------------------------------------------------------------------------------------------------------------------->
     <!-- Script links -->
     <script
