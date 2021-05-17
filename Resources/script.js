@@ -1,3 +1,5 @@
+// JavaScript Code
+// Author:Kishor M Balgi
 "use strict";
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Selectors.
@@ -105,7 +107,7 @@ const closePage = function (i) {
   }
 };
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//Alarm
+//Alarm.
 btnAddAlarm.addEventListener("click", function (e) {
   e.preventDefault();
   const hrs = Number(inputAlarmHours.value);
@@ -128,7 +130,7 @@ btnAddAlarm.addEventListener("click", function (e) {
   inputAlarmHours.value = inputAlarmMinutes.value = "";
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//Alarm display list
+//Alarm display list.
 const displayAlarmList = function (alarmSet) {
   displayAlarm.innerHTML = "";
   alarmSet.forEach(function (ele, i) {
@@ -217,7 +219,6 @@ btnAlarmOff.addEventListener("click", function () {
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Alarm audio play pause functions.
-
 function playAudio() {
   audio = new Audio("Vendors/Sounds/alarm_sound.mp3");
   audio.play();
@@ -226,8 +227,7 @@ function pauseAudio() {
   audio.pause();
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Timer
-
+// Timer.
 btnTimerStart.addEventListener("click", function () {
   if (resume === 0) {
     startValue =
@@ -274,6 +274,7 @@ btnTimerStart.addEventListener("click", function () {
     reset();
   }
 });
+// Timer reset operation.
 const reset = function () {
   inputTimerSeconds.value = inputTimerMinutes.value = inputTimerHours.value = 0;
   clearInterval(timerInterval);
@@ -282,6 +283,7 @@ const reset = function () {
   timerProgressBar.style.width = "0";
   cancle--;
 };
+// Timer pause-resume operation.
 const pauseResume = function () {
   if (resume === 0) {
     btnTimerPause.textContent = "Resume";
@@ -327,6 +329,7 @@ btnStopwatchStart.addEventListener("click", function () {
     stop--;
   }
 });
+// Stopwatch reset operation.
 btnStopwatchReset.addEventListener("click", function () {
   inputStopwatchMinutes.textContent =
     inputStopwatchSeconds.textContent =
@@ -337,3 +340,4 @@ btnStopwatchReset.addEventListener("click", function () {
   btnStopwatchStart.style.color = "";
   stop = 0;
 });
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
