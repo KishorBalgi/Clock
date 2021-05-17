@@ -1,0 +1,195 @@
+/* CSS Queries */
+/* Author:Kishor M Balgi */
+/* Screen Size: 1000px */
+@media only screen and (max-width: 1000px) {
+  body {
+    font-size: 30px;
+  }
+  .close,
+  .add,
+  .on-off,
+  .edit,
+  .delete {
+    font-size: 100%;
+  }
+}
+/*Screen Size: 800px */
+@media only screen and (max-width: 800px) {
+  .time-input {
+    width: 100px;
+  }
+}
+/* Screen Size: 760px */
+@media only screen and (max-width: 760px) {
+  body {
+    font-size: 25px;
+  }
+  .close,
+  .add,
+  .on-off,
+  .edit,
+  .delete {
+    font-size: 110%;
+  }
+  input {
+    width: 35%;
+  }
+}
+/* Screen Size: 630px */
+@media only screen and (max-width: 630px) {
+  body {
+    font-size: 20px;
+  }
+  .clock-options {
+    font-size: 70%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .clock-options li {
+    padding: 5px 0;
+  }
+  .alarm-block {
+    font-size: 110%;
+  }
+  .close,
+  .add,
+  .on-off,
+  .edit,
+  .delete {
+    font-size: 130%;
+  }
+  h1 {
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .heading {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .close {
+    padding: 0;
+    margin-top: 45px;
+  }
+  .time-input,
+  .box {
+    width: 80px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+  .time-input-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 150%;
+  }
+  .time-options {
+    margin-top: 10px;
+  }
+  h1 {
+    margin-bottom: 0px;
+  }
+  .time-options {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .btn-time {
+    margin-bottom: 13px;
+  }
+  .progress-bar {
+    width: 80%;
+  }
+  .modal {
+    font-size: 150%;
+  }
+}
+/* Screen Size: 500px */
+@media only screen and (max-width: 500px) {
+  body {
+    font-size: 17px;
+  }
+  .clock-options {
+    font-size: 75%;
+  }
+  .alarm-block {
+    font-size: 120%;
+  }
+  .progress-bar {
+    height: 25px;
+  }
+  .time-input-block p {
+    font-size: 70%;
+  }
+}
+/* Screen Size: 430px */
+@media only screen and (max-width: 430px) {
+  body {
+    font-size: 14px;
+  }
+  .clock-options {
+    font-size: 80%;
+  }
+  .alarm-block {
+    font-size: 140%;
+  }
+  .progress-bar {
+    height: 20px;
+  }
+}
+/* Screen Size: 360px */
+@media only screen and (max-width: 360px) {
+  body {
+    font-size: 12px;
+  }
+  .clock-options {
+    font-size: 85%;
+  }
+}
+/* Screen Size: 300px */
+@media only screen and (max-width: 300px) {
+  body {
+    font-size: 10px;
+  }
+  .clock-options {
+    font-size: 95%;
+  }
+  .alarm-block {
+    font-size: 160%;
+  }
+  input {
+    width: 40%;
+  }
+}
+/* Screen Size: 250px */
+@media only screen and (max-width: 250px) {
+  body {
+    font-size: 8px;
+  }
+  .clock-options {
+    font-size: 110%;
+  }
+  .alarm-block {
+    font-size: 180%;
+  }
+  input {
+    width: 45%;
+  }
+}
