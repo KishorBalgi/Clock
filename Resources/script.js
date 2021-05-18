@@ -285,12 +285,12 @@ const reset = function () {
 };
 // Timer pause-resume operation.
 const pauseResume = function () {
-  if (resume === 0) {
+  if (resume === 0 && cancle !== 0) {
     btnTimerPause.textContent = "Resume";
     clearInterval(timerInterval);
     cancle--;
     resume++;
-  } else {
+  } else if (resume !== 0 && cancle === 0) {
     btnTimerPause.textContent = "Pause";
     btnTimerStart.click();
     resume--;
