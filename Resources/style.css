@@ -186,7 +186,7 @@ ion-icon:hover {
 }
 /* Display stylings */
 .box {
-  border: 5px solid orange;
+  border: 3px solid orange;
   width: 80px;
   text-align: center;
   padding: 15px;
@@ -211,7 +211,7 @@ ion-icon:hover {
 }
 .time-input {
   background-color: black;
-  border: 5px solid white;
+  border: 3px solid white;
   color: white;
   border-radius: 10%;
   height: 200%;
